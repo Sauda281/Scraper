@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {{!-- bootstrap cdn --}}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    {{!-- bootstrap min css --}}
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+        {{!-- css link --}}
+        <link rel="stylesheet" href="/assets/css/scraper_style.css" type="text/css">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark mb-5 border border-primary border-lg">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                <a class="nav-link text-primary font-weight-bold border" href="/">Home<span class="sr-only">(current)</span></a>
+                </li>
+            <li class="nav-item">
+            <a class="nav-link text-primary font-weight-bold border" href="/saved">Saved Articles</a>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link text-primary font-weight-bold border" href="/scraper">Scrape</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    {{{body}}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="/assets/js/script.js"></script>    
+</body>
+</html>
