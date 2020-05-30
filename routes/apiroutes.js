@@ -8,15 +8,15 @@ var cheerio = require("cheerio")
 function apiRoutes(app){
     app.get("/scrape", (req, res)=> {
 
-    axios.get("https://www.nytimes.com").then(function(results){
+    axios.get("https://www.cosmopolitan.com/lifestyle/a32699270/mercury-in-cancer-2020-transit-horoscopes/").then(function(results){
 
     db.Article.remove().then(function(result){
         var $ = cheerio.load(results.data)
-        // scraping article using cheerio with the article class name block.post and inside that you have children that have the image, title, link and summary
-        $("article.block-post").each(function(i,element){
+        // scraping article using cheerio with the article with the class name div."simple-item-title item-title" and inside that you have children that have the image, title, link and summary
+        $("div.simple-item-title item-title").each(function(i,element){
             var image = $(this).children("a").children("img").attr("data-src")
-            var title = $(this).children("div.block-post-summary").attr("href")
-            var summary = $(this).children("div.block-post-summary").text()
+            var title = $(this).children("div.simple-item-title item-title").attr("href")
+            var summary = $(this).children("div.simple-item-title item-title").text()
 
             console.log(image)
             console.log(title)
