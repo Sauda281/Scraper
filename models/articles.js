@@ -10,9 +10,16 @@ var articlesSchema = new Schema({
     summary:{
         type:String
     },
+
+    link:{
+        type: String
+    },
     image:{
-        type:Boolean,
-        default:false
+        type: String
+    },
+    saved:{
+        type: Boolean,
+        default: false
     },
     notes:
     [{
@@ -22,3 +29,5 @@ var articlesSchema = new Schema({
 })
 
 var Article = mongoose.model("Article", articlesSchema)
+
+module.exports= Article

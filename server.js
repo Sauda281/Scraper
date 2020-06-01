@@ -18,9 +18,8 @@ var apiRoutes = require("./routes/apiroutes")
 
 apiRoutes(app)
 
-var MONGODB_URI =process.env.MONGO_URI || "mongodb://localhost/scraperdb"
 
-mongoose.connect(MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/scraperdb")
 
 console.log("successfully connected to mongodb")
 

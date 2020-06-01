@@ -2,6 +2,6 @@
 // way to navigate through all the schemas
 // purpose of models is to use pre-build crud method in mongoose
 module.exports={
-    Article:require("./articles"),
-    Note:require("./notes")
+    Article: require("./articles"),
+    Note: require("./notes")
 }
